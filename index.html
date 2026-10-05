@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Chitralekha Bairagi - AI and Software Engineer portfolio with projects in machine learning, data science, and full-stack development.">
+  <title>Chitralekha Bairagi | AI & Software Engineer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <style>
+    :root {
+      --ink: #101114;
+      --muted: #62646a;
+      --paper: #f7f4ee;
+      --line: #ded8cd;
+      --accent: #0e7c7b;
+      --plum: #7c3aed;
+      --coral: #e35d44;
+      --sun: #f5a524;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      color: var(--ink);
+      background:
+        linear-gradient(90deg, rgba(16, 17, 20, 0.035) 1px, transparent 1px),
+        linear-gradient(rgba(16, 17, 20, 0.035) 1px, transparent 1px),
+        var(--paper);
+      background-size: 44px 44px;
+    }
+
+    .glass-nav {
+      background: rgba(247, 244, 238, 0.82);
+      border-bottom: 1px solid rgba(16, 17, 20, 0.08);
+      backdrop-filter: blur(18px);
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    .name-gradient {
+      background: linear-gradient(110deg, var(--ink), var(--accent), var(--plum), var(--coral));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .portrait-frame {
+      border: 1px solid rgba(16, 17, 20, 0.12);
+      box-shadow: 12px 12px 0 #101114, -8px -8px 0 rgba(14, 124, 123, 0.18);
+    }
+
+    .social-link,
+    .pill,
+    .project-card,
+    .credential-card,
+    .metric-card {
+      border: 1px solid rgba(16, 17, 20, 0.12);
+      background: rgba(255, 252, 246, 0.82);
+    }
+
+    .social-link,
+    .pill {
+      transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+    }
+
+    .social-link:hover,
+    .pill:hover {
+      transform: translateY(-2px);
+      border-color: rgba(14, 124, 123, 0.5);
+      background: #ffffff;
+    }
+
+    .project-card {
+      position: relative;
+      overflow: hidden;
+      transition: transform 200ms ease, box-shadow 200ms ease, border-color 200ms ease;
+    }
+
+    .project-card::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--accent), var(--plum), var(--coral), var(--sun));
+    }
+
+    .project-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(16, 17, 20, 0.24);
+      box-shadow: 0 18px 42px rgba(16, 17, 20, 0.1);
+    }
+
+    @media (max-width: 768px) {
+      .portrait-frame {
+        box-shadow: 8px 8px 0 #101114, -6px -6px 0 rgba(14, 124, 123, 0.18);
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="glass-nav fixed top-0 z-50 w-full" aria-label="Main navigation">
+    <div class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
+      <a href="#home" class="text-sm font-extrabold tracking-[0.24em] text-stone-950">CB</a>
+      <div class="hidden items-center gap-7 text-sm font-semibold text-stone-700 md:flex">
+        <a href="#experience" class="transition hover:text-teal-700">Experience</a>
+        <a href="#work" class="transition hover:text-teal-700">Work</a>
+        <a href="#skills" class="transition hover:text-teal-700">Skills</a>
+        <a href="#credentials" class="transition hover:text-teal-700">Credentials</a>
+        <a href="Chitralekha_Bairagi_Resume.pdf" target="_blank" rel="noreferrer" class="transition hover:text-teal-700">Resume</a>
+        <a href="#contact" class="transition hover:text-teal-700">Contact</a>
+      </div>
+      <a href="Chitralekha_Bairagi_Resume.pdf" target="_blank" rel="noreferrer" class="rounded-full bg-stone-950 px-4 py-2 text-sm font-bold text-white transition hover:bg-teal-700">
+        Resume
+      </a>
+    </div>
+  </nav>
+
+  <main>
+    <section id="home" class="mx-auto grid min-h-screen max-w-6xl items-center gap-12 px-5 pb-16 pt-28 lg:grid-cols-[1.1fr_0.9fr]">
+      <div>
+        <p class="eyebrow mb-4 text-[0.68rem]">AI engineer - backend builder - CSE 2026</p>
+        <h1 class="max-w-2xl text-3xl font-extrabold leading-[1.12] tracking-tight text-stone-950 md:text-5xl">
+          Chitralekha Bairagi explores <span class="name-gradient">AI engineering</span>, backend systems, and practical software.
+        </h1>
+        <p class="mt-7 max-w-2xl text-lg leading-8 text-stone-700">
+          B.Tech CSE student specializing in backend systems, Generative AI, RAG, agentic workflows, and full-stack AI applications. I build modular Python services, REST APIs, LLM integrations, and data-backed dashboards that move from idea to working product.
+        </p>
+
+        <div class="mt-8 grid gap-3 sm:grid-cols-3">
+          <div class="metric-card rounded-lg p-4">
+            <p class="text-2xl font-extrabold text-stone-950">8.74</p>
+            <p class="mt-1 text-sm font-medium text-stone-600">Current CGPA</p>
+          </div>
+          <div class="metric-card rounded-lg p-4">
+            <p class="text-2xl font-extrabold text-stone-950">30-40%</p>
+            <p class="mt-1 text-sm font-medium text-stone-600">Review-time reduction in testing</p>
+          </div>
+          <div class="metric-card rounded-lg p-4">
+            <p class="text-2xl font-extrabold text-stone-950">Top 50</p>
+            <p class="mt-1 text-sm font-medium text-stone-600">SIH university round</p>
+          </div>
+        </div>
+
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="mailto:chitralekha2810@gmail.com" class="inline-flex items-center gap-2 rounded-full bg-stone-950 px-5 py-3 text-sm font-bold text-white transition hover:bg-teal-700">
+            <i class="fa-solid fa-envelope"></i>
+            Email me
+          </a>
+          <a href="https://github.com/chitralekha28?tab=repositories" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 rounded-full border border-stone-950 px-5 py-3 text-sm font-bold text-stone-950 transition hover:bg-white">
+            <i class="fa-brands fa-github"></i>
+            Explore projects
+          </a>
+          <a href="Chitralekha_Bairagi_Resume.pdf" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 rounded-full border border-stone-950 px-5 py-3 text-sm font-bold text-stone-950 transition hover:bg-white">
+            <i class="fa-solid fa-file-arrow-down"></i>
+            View resume
+          </a>
+        </div>
+
+        <div class="mt-8 flex flex-wrap gap-3 text-sm font-bold">
+          <a class="social-link rounded-full px-4 py-2" href="https://github.com/chitralekha28" target="_blank" rel="noreferrer"><i class="fa-brands fa-github mr-2"></i>GitHub</a>
+          <a class="social-link rounded-full px-4 py-2" href="https://www.linkedin.com/in/chitralekha-bairagi-180ba9290/" target="_blank" rel="noreferrer"><i class="fa-brands fa-linkedin mr-2"></i>LinkedIn</a>
+          <a class="social-link rounded-full px-4 py-2" href="https://leetcode.com/_chitralekha_/" target="_blank" rel="noreferrer"><i class="fa-solid fa-code mr-2"></i>LeetCode</a>
+          <a class="social-link rounded-full px-4 py-2" href="https://www.hackerrank.com/chitralekha2810" target="_blank" rel="noreferrer"><i class="fa-brands fa-hackerrank mr-2"></i>HackerRank</a>
+          <a class="social-link rounded-full px-4 py-2" href="https://www.geeksforgeeks.org/profile/chitralekhjt4r" target="_blank" rel="noreferrer"><i class="fa-solid fa-laptop-code mr-2"></i>GeeksforGeeks</a>
+        </div>
+      </div>
+
+      <div class="mx-auto w-full max-w-[240px] lg:justify-self-end">
+        <div class="portrait-frame rounded-lg bg-white p-2">
+          <img src="profilefor-social.png" alt="Illustrated profile avatar of Chitralekha Bairagi" class="aspect-square h-[220px] w-[220px] rounded-md object-cover">
+        </div>
+        <div class="mt-8 rounded-lg border border-stone-950 bg-stone-950 p-5 text-white">
+          <p class="text-sm font-semibold uppercase tracking-[0.2em] text-teal-200">Currently focused on</p>
+          <p class="mt-3 text-xl font-bold leading-snug">RAG systems, multi-agent apps, backend APIs, and deployable AI tooling.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="border-y border-stone-950/10 bg-white py-24">
+      <div class="mx-auto max-w-6xl px-5">
+        <div class="mb-12 grid gap-6 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
+          <div>
+            <p class="eyebrow mb-3">Profile highlights</p>
+            <h2 class="text-4xl font-extrabold tracking-tight text-stone-950 md:text-5xl">Learning by building AI and backend systems.</h2>
+          </div>
+          <p class="text-base leading-7 text-stone-700">A snapshot of academic projects and hands-on work across Generative AI, RAG, multi-agent systems, REST APIs, and Python services.</p>
+        </div>
+
+        <div class="grid gap-5 lg:grid-cols-2">
+          <article class="project-card rounded-lg p-6">
+            <div class="flex flex-wrap items-center justify-between gap-3">
+              <p class="text-xs font-extrabold uppercase tracking-[0.18em] text-teal-700">Jan 2026 - Apr 2026</p>
+              <span class="pill rounded-full px-3 py-1 text-xs font-bold">Medicaps University</span>
+            </div>
+            <h3 class="mt-4 text-2xl font-extrabold text-stone-950">AI-Powered Multimodal Hospitality Creator</h3>
+            <p class="mt-3 text-sm leading-6 text-stone-600">Designed an end-to-end backend pipeline with REST APIs, ChromaDB, Sentence Transformers, Gemini, and Stable Diffusion to ground generated content and reduce hallucination.</p>
+            <div class="mt-5 flex flex-wrap gap-2">
+              <span class="pill rounded-full px-3 py-1 text-xs font-bold">Python</span>
+              <span class="pill rounded-full px-3 py-1 text-xs font-bold">Flask</span>
+              <span class="pill rounded-full px-3 py-1 text-xs font-bold">ChromaDB</span>
+              <span class="pill rounded-full px-3 py-1 text-xs font-bold">RAG</span>
+              <span class="pill rounded-full px-3 py-1 text-xs font-bold">Stable Diffusion</span>
+            </div>
+          </article>
+
+          <article class="project-card rounded-lg p-6">
+            <div class="flex flex-wrap items-center justify-between gap-3">
+              <p class="text-xs font-extrabold uppercase tracking-[0.18em] text-purple-700">Jan 2026 - Apr 2026</p>
+              <span class="pill rounded-full px-3 py-1 text-xs font-bold">Agentic AI</span>
+            </div>
+            <h3 class="mt-4 text-2xl font-extrabold text-stone-950">Multi-Agent Trip Planner</h3>
+            <p class="mt-3 text-sm leading-6 text-stone-600">Built a CrewAI system coordinating research, itinerary, and budgeting agents through clean API contracts, with DuckDuckGo search and Groq-powered low-latency inference.</p>
+            <div class="mt-5 flex flex-wrap gap-2">
+              <span class="pill rounded-full px-3 py-1 text-xs font-bold">CrewAI</span>
+              <span class="pill rounded-full px-3 py-1 text-xs font-bold">LangChain</span>
+              <span class="pill rounded-full px-3 py-1 text-xs font-bold">Groq API</span>
+              <span class="pill rounded-full px-3 py-1 text-xs font-bold">Web Search</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="work" class="border-y border-stone-950/10 bg-white/50 py-24">
+      <div class="mx-auto max-w-6xl px-5">
+        <div class="mb-12 flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
+          <div>
+            <p class="eyebrow mb-3">Selected work</p>
+            <h2 class="text-4xl font-extrabold tracking-tight text-stone-950 md:text-5xl">Projects and experiments.</h2>
+          </div>
+          <a href="https://github.com/chitralekha28" target="_blank" rel="noreferrer" class="text-sm font-extrabold text-teal-700 hover:text-stone-950">
+            View full GitHub <i class="fa-solid fa-arrow-right ml-1"></i>
+          </a>
+        </div>
+
+        <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+          <article class="project-card rounded-lg p-6">
+            <p class="text-xs font-extrabold uppercase tracking-[0.18em] text-teal-700">Computer Vision</p>
+            <h3 class="mt-4 text-2xl font-extrabold text-stone-950">TrafficEye AI</h3>
+            <p class="mt-3 text-sm leading-6 text-stone-600">Traffic violation detection and analytics pipeline with detection, OCR, evidence generation, and database-backed reporting modules.</p>
+            <div class="mt-5 flex flex-wrap gap-2">
+              <span class="pill rounded-full px-3 py-1 text-xs font-bold">Python</span>
+              <span class="pill rounded-full px-3 py-1 text-xs font-bold">YOLOv8</span>
+              <span class="pill rounded-full px-3 py-1 text-xs font-bold">OCR</span>
+              <span class="pill rounded-full px-3 py-1 text-xs font-bold">SQLite</span>
+            </div>
+            <a href="https://github.com/chitralekha28" target="_blank" rel="noreferrer" class="mt-8 inline-flex text-sm font-extrabold text-stone-950 hover:text-teal-700">GitHub <i class="fa-solid fa-arrow-up-right-from-square ml-2 mt-0.5"></i></a>
+          </article>
+
+          <article class="project-card rounded-lg p-6">
+            <p class="text-xs font-extrabold uppercase tracking-[0.18em] text-purple-700">LLM Automation</p>
+            <h3 class="mt-4 text-2xl font-extrabold text-stone-950">AI Code Reviewer Agent</h3>
+            <p class="mt-3 text-sm leading-6 text-stone-600">Webhook-driven code review agent that listens for repository events, triggers LLM reviews, and surfaces findings in a dashboard.</p>
+            <div class="mt-5 flex flex-wrap gap-2">
+              <span class="pill rounded-full px-3 py-1 text-xs font-bold">LLMs</span>
+              <span class="pill rounded-full px-3 py-1 text-xs font-bold">Webhooks</span>
+              <span class="pill rounded-full px-3 py-1 text-xs font-bold">REST APIs</span>
+            </div>
+            <a href="https://github.com/chitralekha28" target="_blank" rel="noreferrer" class="mt-8 inline-flex text-sm font-extrabold text-stone-950 hover:text-teal-700">GitHub <i class="fa-solid fa-arrow-up-right-from-square ml-2 mt-0.5"></i></a>
+          </article>
+
+          <article class="project-card rounded-lg p-6">
+            <p class="text-xs font-extrabold uppercase tracking-[0.18em] text-amber-700">RAG + Image Generation</p>
+            <h3 class="mt-4 text-2xl font-extrabold text-stone-950">Hospitality Creator</h3>
+            <p class="mt-3 text-sm leading-6 text-stone-600">Multimodal app that combines semantic retrieval, grounded LLM output, and image generation for hospitality content workflows.</p>
+            <div class="mt-5 flex flex-wrap gap-2">
+              <span class="pill rounded-full px-3 py-1 text-xs font-bold">Flask</span>
+              <span class="pill rounded-full px-3 py-1 text-xs font-bold">Gemini</span>
+              <span class="pill rounded-full px-3 py-1 text-xs font-bold">ChromaDB</span>
+            </div>
+            <a href="https://github.com/chitralekha28/Multimodal-Hospitality-Creator" target="_blank" rel="noreferrer" class="mt-8 inline-flex text-sm font-extrabold text-stone-950 hover:text-teal-700">Repository <i class="fa-solid fa-arrow-up-right-from-square ml-2 mt-0.5"></i></a>
+          </article>
+
+          <article class="project-card rounded-lg p-6">
+            <p class="text-xs font-extrabold uppercase tracking-[0.18em] text-teal-700">Agentic AI</p>
+            <h3 class="mt-4 text-2xl font-extrabold text-stone-950">Multi-Agent Trip Planner</h3>
+            <p class="mt-3 text-sm leading-6 text-stone-600">CrewAI-based planner that coordinates specialized research, itinerary, and budgeting agents into one coherent travel plan.</p>
+            <div class="mt-5 flex flex-wrap gap-2">
+              <span class="pill rounded-full px-3 py-1 text-xs font-bold">CrewAI</span>
+              <span class="pill rounded-full px-3 py-1 text-xs font-bold">LangChain</span>
+              <span class="pill rounded-full px-3 py-1 text-xs font-bold">Groq API</span>
+            </div>
+            <a href="https://github.com/chitralekha28" target="_blank" rel="noreferrer" class="mt-8 inline-flex text-sm font-extrabold text-stone-950 hover:text-teal-700">GitHub <i class="fa-solid fa-arrow-up-right-from-square ml-2 mt-0.5"></i></a>
+          </article>
+
+          <article class="project-card rounded-lg p-6">
+            <p class="text-xs font-extrabold uppercase tracking-[0.18em] text-sky-700">EdTech</p>
+            <h3 class="mt-4 text-2xl font-extrabold text-stone-950">DSA Mentor AI</h3>
+            <p class="mt-3 text-sm leading-6 text-stone-600">Interactive algorithm-learning platform with AI mentoring logic for guided practice.</p>
+            <div class="mt-5 flex flex-wrap gap-2">
+              <span class="pill rounded-full px-3 py-1 text-xs font-bold">DSA</span>
+              <span class="pill rounded-full px-3 py-1 text-xs font-bold">AI Mentor</span>
+              <span class="pill rounded-full px-3 py-1 text-xs font-bold">Web App</span>
+            </div>
+            <a href="https://github.com/chitralekha28/dsa-mentor-ai" target="_blank" rel="noreferrer" class="mt-8 inline-flex text-sm font-extrabold text-stone-950 hover:text-teal-700">Repository <i class="fa-solid fa-arrow-up-right-from-square ml-2 mt-0.5"></i></a>
+          </article>
+
+          <article class="project-card rounded-lg p-6">
+            <p class="text-xs font-extrabold uppercase tracking-[0.18em] text-rose-700">Deep Learning</p>
+            <h3 class="mt-4 text-2xl font-extrabold text-stone-950">Deepfake Detection App</h3>
+            <p class="mt-3 text-sm leading-6 text-stone-600">Detection workflow for identifying visual inconsistencies in AI-generated video content.</p>
+            <div class="mt-5 flex flex-wrap gap-2">
+              <span class="pill rounded-full px-3 py-1 text-xs font-bold">Deep Learning</span>
+              <span class="pill rounded-full px-3 py-1 text-xs font-bold">Model Evaluation</span>
+              <span class="pill rounded-full px-3 py-1 text-xs font-bold">Video AI</span>
+            </div>
+            <a href="https://github.com/chitralekha28/deepfake-detection" target="_blank" rel="noreferrer" class="mt-8 inline-flex text-sm font-extrabold text-stone-950 hover:text-teal-700">Repository <i class="fa-solid fa-arrow-up-right-from-square ml-2 mt-0.5"></i></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="py-24">
+      <div class="mx-auto max-w-6xl px-5">
+        <div class="grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
+          <div>
+            <p class="eyebrow mb-3">Technical stack</p>
+            <h2 class="text-4xl font-extrabold tracking-tight text-stone-950">Built for AI, data, and product delivery.</h2>
+            <p class="mt-5 text-base leading-7 text-stone-700">The portfolio now presents your skills the way hiring teams scan: core languages, AI depth, backend execution, databases, and cloud/tooling.</p>
+          </div>
+
+          <div class="grid gap-5 sm:grid-cols-2">
+            <div class="credential-card rounded-lg p-6">
+              <h3 class="font-extrabold text-stone-950">Programming</h3>
+              <div class="mt-4 flex flex-wrap gap-2">
+                <span class="pill rounded-full px-3 py-1 text-sm font-semibold">C++</span>
+                <span class="pill rounded-full px-3 py-1 text-sm font-semibold">Python</span>
+                <span class="pill rounded-full px-3 py-1 text-sm font-semibold">SQL</span>
+                <span class="pill rounded-full px-3 py-1 text-sm font-semibold">JavaScript</span>
+                <span class="pill rounded-full px-3 py-1 text-sm font-semibold">OOP</span>
+                <span class="pill rounded-full px-3 py-1 text-sm font-semibold">DBMS</span>
+              </div>
+            </div>
+            <div class="credential-card rounded-lg p-6">
+              <h3 class="font-extrabold text-stone-950">AI & Data Science</h3>
+              <div class="mt-4 flex flex-wrap gap-2">
+                <span class="pill rounded-full px-3 py-1 text-sm font-semibold">Machine Learning</span>
+                <span class="pill rounded-full px-3 py-1 text-sm font-semibold">NLP</span>
+                <span class="pill rounded-full px-3 py-1 text-sm font-semibold">Computer Vision</span>
+                <span class="pill rounded-full px-3 py-1 text-sm font-semibold">Deep Learning</span>
+                <span class="pill rounded-full px-3 py-1 text-sm font-semibold">Scikit-learn</span>
+                <span class="pill rounded-full px-3 py-1 text-sm font-semibold">TensorFlow</span>
+              </div>
+            </div>
+            <div class="credential-card rounded-lg p-6">
+              <h3 class="font-extrabold text-stone-950">Backend & Web</h3>
+              <div class="mt-4 flex flex-wrap gap-2">
+                <span class="pill rounded-full px-3 py-1 text-sm font-semibold">FastAPI</span>
+                <span class="pill rounded-full px-3 py-1 text-sm font-semibold">React</span>
+                <span class="pill rounded-full px-3 py-1 text-sm font-semibold">Flask</span>
+                <span class="pill rounded-full px-3 py-1 text-sm font-semibold">REST APIs</span>
+                <span class="pill rounded-full px-3 py-1 text-sm font-semibold">Streamlit</span>
+                <span class="pill rounded-full px-3 py-1 text-sm font-semibold">Tailwind CSS</span>
+              </div>
+            </div>
+            <div class="credential-card rounded-lg p-6">
+              <h3 class="font-extrabold text-stone-950">Tools & Cloud</h3>
+              <div class="mt-4 flex flex-wrap gap-2">
+                <span class="pill rounded-full px-3 py-1 text-sm font-semibold">AWS</span>
+                <span class="pill rounded-full px-3 py-1 text-sm font-semibold">Google Cloud</span>
+                <span class="pill rounded-full px-3 py-1 text-sm font-semibold">Docker</span>
+                <span class="pill rounded-full px-3 py-1 text-sm font-semibold">MySQL</span>
+                <span class="pill rounded-full px-3 py-1 text-sm font-semibold">MongoDB</span>
+                <span class="pill rounded-full px-3 py-1 text-sm font-semibold">ChromaDB</span>
+                <span class="pill rounded-full px-3 py-1 text-sm font-semibold">GitHub</span>
+                <span class="pill rounded-full px-3 py-1 text-sm font-semibold">VS Code</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="credential-card rounded-lg p-6 lg:col-start-2">
+            <h3 class="font-extrabold text-stone-950">Generative AI & Agents</h3>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="pill rounded-full px-3 py-1 text-sm font-semibold">LLMs</span>
+              <span class="pill rounded-full px-3 py-1 text-sm font-semibold">RAG</span>
+              <span class="pill rounded-full px-3 py-1 text-sm font-semibold">Prompt Engineering</span>
+              <span class="pill rounded-full px-3 py-1 text-sm font-semibold">LangChain</span>
+              <span class="pill rounded-full px-3 py-1 text-sm font-semibold">LangGraph</span>
+              <span class="pill rounded-full px-3 py-1 text-sm font-semibold">MCP</span>
+              <span class="pill rounded-full px-3 py-1 text-sm font-semibold">Hugging Face</span>
+              <span class="pill rounded-full px-3 py-1 text-sm font-semibold">Sentence Transformers</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="credentials" class="border-y border-stone-950/10 bg-stone-950 py-24 text-white">
+      <div class="mx-auto max-w-6xl px-5">
+        <div class="mb-12 grid gap-6 md:grid-cols-[0.75fr_1fr] md:items-end">
+          <div>
+            <p class="eyebrow mb-3 text-teal-200">Credentials</p>
+            <h2 class="text-4xl font-extrabold tracking-tight md:text-5xl">Education, certifications, and achievements.</h2>
+          </div>
+          <p class="text-base leading-7 text-stone-300">A collection of academic details, certificates, coding profiles, and activities that reflect my learning journey.</p>
+        </div>
+
+        <div class="grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
+          <div class="rounded-lg border border-white/20 bg-white/10 p-4">
+            <img src="Chitralekha_certificate_s13.jpeg" alt="Code Vipassana Season 13 certificate" class="max-h-[430px] w-full rounded-md object-cover object-top">
+            <div class="mt-5 px-2 pb-2">
+              <p class="text-xs font-extrabold uppercase tracking-[0.2em] text-teal-200">Featured achievement</p>
+              <h3 class="mt-2 text-2xl font-extrabold">Code Vipassana Season 13</h3>
+              <p class="mt-2 text-sm leading-6 text-stone-300">Google Developer Groups Cloud Kochi - outstanding performance for building Postgres-compatible AI applications with Google Cloud.</p>
+            </div>
+          </div>
+
+          <div class="grid gap-5">
+            <div class="rounded-lg border border-white/20 bg-white/10 p-6">
+              <div class="flex items-center gap-3">
+                <i class="fa-solid fa-certificate text-2xl text-amber-300"></i>
+                <h3 class="text-xl font-extrabold">Professional Certifications</h3>
+              </div>
+              <ul class="mt-5 space-y-3 text-sm leading-6 text-stone-300">
+                <li>Agentic AI & Generative AI - NASSCOM / Datagami, IBM Gold Partner, 80-hour skill-based projects (Jan - Mar 2026)</li>
+                <li>AWS Academy Graduate - Cloud Architecting (2025)</li>
+                <li>AWS Cloud Foundations (2025)</li>
+                <li>Exploratory Data Analysis with Python & GenAI (November 2025)</li>
+                <li>TATA Forage Virtual Internship (2025)</li>
+              </ul>
+            </div>
+            <div class="rounded-lg border border-white/20 bg-white/10 p-6">
+              <div class="flex items-center gap-3">
+                <i class="fa-solid fa-ranking-star text-2xl text-teal-200"></i>
+                <h3 class="text-xl font-extrabold">Academic & Competitive Highlights</h3>
+              </div>
+              <ul class="mt-5 space-y-3 text-sm leading-6 text-stone-300">
+                <li>Medi-Caps University - B.Tech CSE 2026 - 8.74 CGPA</li>
+                <li>Top 50 out of 300+ participants, Smart India Hackathon 2025 university-level round</li>
+                <li>Built and shipped agentic AI applications for the Agents League - Creative Apps challenge</li>
+                <li>Research Paper Award - VIVIBHA 2024</li>
+              </ul>
+            </div>
+            <a href="https://www.geeksforgeeks.org/profile/chitralekhjt4r" target="_blank" rel="noreferrer" class="rounded-lg border border-teal-200/40 bg-teal-300 px-6 py-5 font-extrabold text-stone-950 transition hover:bg-white">
+              <i class="fa-solid fa-laptop-code mr-2"></i>
+              View my GeeksforGeeks profile
+            </a>
+            <a href="Chitralekha_Bairagi_Resume.pdf" target="_blank" rel="noreferrer" class="rounded-lg border border-white/20 bg-white px-6 py-5 font-extrabold text-stone-950 transition hover:bg-teal-100">
+              <i class="fa-solid fa-file-arrow-down mr-2"></i>
+              Open full resume PDF
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="py-24">
+      <div class="mx-auto max-w-6xl px-5">
+        <div class="rounded-lg border border-stone-950 bg-white p-8 md:p-12">
+          <p class="eyebrow mb-3">Contact</p>
+          <div class="grid gap-8 md:grid-cols-[1fr_auto] md:items-end">
+            <div>
+              <h2 class="max-w-3xl text-4xl font-extrabold tracking-tight text-stone-950 md:text-5xl">Let us connect.</h2>
+              <p class="mt-5 max-w-2xl text-base leading-7 text-stone-700">I am open to internships, entry-level opportunities, collaborations, and learning-focused work across AI engineering, backend development, Generative AI, data science, and full-stack development.</p>
+            </div>
+            <div class="flex flex-col gap-3 sm:flex-row md:flex-col">
+              <a href="mailto:chitralekha2810@gmail.com" class="rounded-full bg-stone-950 px-6 py-3 text-center text-sm font-extrabold text-white transition hover:bg-teal-700">Email Chitralekha</a>
+              <a href="Chitralekha_Bairagi_Resume.pdf" target="_blank" rel="noreferrer" class="rounded-full border border-stone-950 px-6 py-3 text-center text-sm font-extrabold text-stone-950 transition hover:bg-stone-100">Resume PDF</a>
+              <a href="https://www.linkedin.com/in/chitralekha-bairagi-180ba9290/" target="_blank" rel="noreferrer" class="rounded-full border border-stone-950 px-6 py-3 text-center text-sm font-extrabold text-stone-950 transition hover:bg-stone-100">LinkedIn</a>
+            </div>
+          </div>
+        </div>
+        <footer class="mt-10 flex flex-col gap-3 text-sm font-semibold text-stone-600 sm:flex-row sm:items-center sm:justify-between">
+          <p>Copyright 2026 Chitralekha Bairagi. AI & Software Engineering.</p>
+          <a href="#home" class="text-stone-950 hover:text-teal-700">Back to top</a>
+        </footer>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
